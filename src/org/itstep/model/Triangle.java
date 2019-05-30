@@ -25,4 +25,12 @@ public class Triangle extends AbstractShape {
     public double getArea() {
         return base * heigth / 2;
     }
+
+    public Triangle(double base, double heigth) {
+        this.base = base;
+        this.heigth = heigth;
+    }
+
+    public Triangle() {
+    }
 }

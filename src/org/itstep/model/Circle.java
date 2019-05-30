@@ -1,6 +1,6 @@
 package org.itstep.model;
 
-public class Circle extends AbstractShape{
+public class Circle extends AbstractShape {
 
     private double radius;
 
@@ -15,5 +15,12 @@ public class Circle extends AbstractShape{
     @Override
     public double getArea() {
         return Math.PI * radius * radius;
+    }
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public Circle() {
     }
 }
