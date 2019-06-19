@@ -4,11 +4,10 @@ import org.itstep.model.Circle;
 import org.itstep.model.Shape;
 import org.itstep.model.Square;
 import org.itstep.model.Triangle;
+import org.itstep.service.ListService;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class ApplicationRunner {
     public static void main(String[] args) {
@@ -20,13 +19,9 @@ public class ApplicationRunner {
         shapeList.add(circle);
         shapeList.add(triangle);
         shapeList.add(square);
-        System.out.println("Size of queue is " + shapeList.size());
-
-        Set<Shape> shapeSet = new HashSet<>(shapeList);
-        shapeSet.add(circle);
-        shapeSet.add(triangle);
-        shapeSet.add(square);
-        System.out.println("Size of set is " + shapeSet.size());
+        Shape maxShape = ListService.getMaxShape(shapeList);
+        System.out.println(" Max shape is " + maxShape.getClass().getSimpleName()+
+                " ans has area " +maxShape.getArea());
 
         /*circle.setRadius(15);
         System.out.println("Circle has radius " + circle.getRadius());
