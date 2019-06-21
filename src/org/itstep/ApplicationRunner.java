@@ -11,9 +11,9 @@ import java.util.List;
 
 public class ApplicationRunner {
     public static void main(String[] args) {
-        Circle circle = new Circle(15);
+        Circle circle = new Circle(5);
         Triangle triangle = new Triangle(10, 8);
-        Square square = new Square(18);
+        Square square = new Square(10);
 
         List<Shape> shapeList = new ArrayList<>();
         shapeList.add(circle);
@@ -22,6 +22,9 @@ public class ApplicationRunner {
         Shape maxShape = ListService.getMaxShape(shapeList);
         System.out.println(" Max shape is " + maxShape.getClass().getSimpleName()+
                 " ans has area " +maxShape.getArea());
+        Shape minShape = ListService.getMinShape(shapeList);
+        System.out.println(" Min shape is " + minShape.getClass().getSimpleName()+
+                " and has area " + minShape.getArea());
 
         /*circle.setRadius(15);
         System.out.println("Circle has radius " + circle.getRadius());
